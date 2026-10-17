@@ -35,6 +35,8 @@ specs=[
 ('Sunday_Creative','Sunday Creative Studio Pro','Digital Skills','A step-by-step website project guide from static pages to ecommerce.',None),
 ]
 books=[]
+# These titles were intentionally removed from the public library.
+specs = [spec for spec in specs if spec[2] != 'Insurance' and spec[1] != 'Calculus Made Clear']
 for n,(prefix,title,category,description,coverprefix) in enumerate(specs):
  src=next(SOURCES.glob(prefix+'*.docx')); d=Document(src)
  slug=re.sub(r'[^a-z0-9]+','-',title.lower().replace('’','')).strip('-')
