@@ -37,6 +37,11 @@ for p in d.paragraphs:
  else:sections[-1]['html']+='<p>'+content+'</p>'
 (root/'public/books'/f'{a.slug}.json').write_text(json.dumps({'sections':sections},ensure_ascii=False))
 p=root/'src/data/books.json';books=json.loads(p.read_text())
-entry={'slug':a.slug,'title':a.title,'category':a.category,'description':a.description,'author':a.author,'cover':a.cover,'words':words,'minutes':max(1,round(words/200)),'sections':[s['title'] for s in sections],'color':len(books)%6}
+pending_path=root/'src/data/pending-covers.json'
+pending=json.loads(pending_path.read_text()) if pending_path.exists() else []
+cover=a.cover or next((item['cover'] for item in pending if item['slug']==a.slug),None)
+entry={'slug':a.slug,'title':a.title,'category':a.category,'description':a.description,'author':a.author,'cover':cover,'words':words,'minutes':max(1,round(words/200)),'sections':[s['title'] for s in sections],'color':len(books)%6}
 books=[b for b in books if b['slug']!=a.slug];books.append(entry);p.write_text(json.dumps(books,ensure_ascii=False,indent=2))
+if any(item['slug']==a.slug for item in pending):
+ pending_path.write_text(json.dumps([item for item in pending if item['slug']!=a.slug],indent=2))
 print(json.dumps({'title':a.title,'words':words,'sections':len(sections),'books':len(books)}))
