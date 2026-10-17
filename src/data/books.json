@@ -116,7 +116,7 @@
     "category": "OFW & Relationships",
     "description": "Thirty days of emotional strength, self-worth, and encouragement for OFW women.",
     "author": "Sunday Pastores",
-    "cover": null,
+    "cover": "/covers/far-from-home-close-to-hope.webp",
     "words": 8876,
     "minutes": 44,
     "sections": [
@@ -210,7 +210,7 @@
     "category": "Fiction",
     "description": "A Facebook love story inspired by an OFW in Hong Kong.",
     "author": "Sunday Creative Studio",
-    "cover": null,
+    "cover": "/covers/last-seen-online.webp",
     "words": 7230,
     "minutes": 36,
     "sections": [
@@ -339,7 +339,7 @@
     "category": "Personal Growth",
     "description": "Why your most important years may still be ahead of you.",
     "author": "Sunday Pastores",
-    "cover": null,
+    "cover": "/covers/the-second-half.webp",
     "words": 40041,
     "minutes": 200,
     "sections": [
@@ -464,7 +464,7 @@
     "category": "Baking",
     "description": "A step-by-step home baking program, with no-scale measurements.",
     "author": "Sunday Pastores",
-    "cover": null,
+    "cover": "/covers/french-baking-in-28-days.webp",
     "words": 6801,
     "minutes": 34,
     "sections": [
@@ -698,7 +698,7 @@
     "category": "Digital Skills",
     "description": "A practical playbook for publishing helpful affiliate content.",
     "author": "Sunday Pastores",
-    "cover": null,
+    "cover": "/covers/how-to-be-an-amazon-affiliate-and-earn-money.webp",
     "words": 3850,
     "minutes": 19,
     "sections": [
@@ -735,7 +735,7 @@
     "category": "Digital Skills",
     "description": "Build websites, apps, dashboards, and full-stack projects with AI.",
     "author": "Sunday Creative Studio",
-    "cover": null,
+    "cover": "/covers/100-copy-paste-ai-prompts-for-vs-code.webp",
     "words": 8289,
     "minutes": 41,
     "sections": [
@@ -826,7 +826,7 @@
     "category": "Digital Skills",
     "description": "A beginner-friendly guide to rebuilding a complete website starter.",
     "author": "Sunday Creative Studio",
-    "cover": null,
+    "cover": "/covers/sunday-website-boilerplate.webp",
     "words": 2859,
     "minutes": 14,
     "sections": [
@@ -861,7 +861,7 @@
     "category": "Digital Skills",
     "description": "A step-by-step website project guide from static pages to ecommerce.",
     "author": "Sunday Creative Studio",
-    "cover": null,
+    "cover": "/covers/sunday-creative-studio-pro.webp",
     "words": 4011,
     "minutes": 20,
     "sections": [

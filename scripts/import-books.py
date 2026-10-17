@@ -34,6 +34,8 @@ specs=[
 ('Sunday_Website','Sunday Website Boilerplate','Digital Skills','A beginner-friendly guide to rebuilding a complete website starter.',None),
 ('Sunday_Creative','Sunday Creative Studio Pro','Digital Skills','A step-by-step website project guide from static pages to ecommerce.',None),
 ]
+catalog_path=ROOT/'src/data/books.json'
+existing_covers={b['slug']:b.get('cover') for b in json.loads(catalog_path.read_text())} if catalog_path.exists() else {}
 books=[]
 # These titles were intentionally removed from the public library.
 specs = [spec for spec in specs if spec[2] not in ('Insurance', 'Nursing Leadership') and spec[1] != 'Calculus Made Clear']
@@ -90,6 +92,7 @@ for n,(prefix,title,category,description,coverprefix) in enumerate(specs):
    if .55<im.width/im.height<.75 and '<img' in sections[0]['html'][:1500]:
     target=ROOT/'public/covers'/(slug+'.jpg');im.convert('RGB').save(target,quality=87);cover='/covers/'+target.name
   except Exception:pass
+ if cover is None:cover=existing_covers.get(slug)
  (ROOT/'public/books'/(slug+'.json')).write_text(json.dumps({'sections':sections},ensure_ascii=False))
  books.append({'slug':slug,'title':title,'category':category,'description':description,'author':author,'cover':cover,'words':words,'minutes':max(1,round(words/200)),'sections':[x['title'] for x in sections],'color':n%6})
  print(title,words,len(sections),len(imgs),'images')
