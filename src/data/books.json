@@ -930,7 +930,7 @@
     "category": "Fiction",
     "description": "Nine rules. One missing girl. A house-sitting job on a remote lake draws Nora Vance into a dangerous mystery.",
     "author": "Sunday Pastores",
-    "cover": null,
+    "cover": "/covers/rule-number-nine.webp",
     "words": 15841,
     "minutes": 79,
     "sections": [
@@ -964,5 +964,47 @@
       "About the Author"
     ],
     "color": 1
+  },
+  {
+    "slug": "the-night-shift-rules",
+    "title": "The Night Shift Rules",
+    "category": "Fiction",
+    "description": "Nine rules govern the night shift at a remote care facility. Room 12 has been empty for years—but its call light still comes on.",
+    "author": "Sunday Pastores",
+    "cover": "/covers/the-night-shift-rules.webp",
+    "words": 15742,
+    "minutes": 79,
+    "sections": [
+      "Opening pages",
+      "Prologue",
+      "Chapter 1",
+      "Chapter 2",
+      "Chapter 3",
+      "Chapter 4",
+      "Chapter 5",
+      "Chapter 6",
+      "Chapter 7",
+      "Chapter 8",
+      "Chapter 9",
+      "Chapter 10",
+      "Chapter 11",
+      "Chapter 12",
+      "Chapter 13",
+      "Chapter 14",
+      "Chapter 15",
+      "Chapter 16",
+      "Chapter 17",
+      "Chapter 18",
+      "Chapter 19",
+      "Chapter 20",
+      "Chapter 21",
+      "Chapter 22",
+      "Chapter 23",
+      "Epilogue",
+      "Author’s Note",
+      "Also by Sunday Pastores",
+      "About the Author"
+    ],
+    "color": 2
   }
 ]
