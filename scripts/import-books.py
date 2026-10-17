@@ -39,7 +39,7 @@ existing_catalog=json.loads(catalog_path.read_text()) if catalog_path.exists() e
 existing_covers={b['slug']:b.get('cover') for b in existing_catalog}
 books=[]
 # These titles were intentionally removed from the public library.
-specs = [spec for spec in specs if spec[2] not in ('Insurance', 'Nursing Leadership') and spec[1] != 'Calculus Made Clear']
+specs = [spec for spec in specs if spec[2] not in ('Insurance', 'Nursing Leadership') and spec[1] not in ('Calculus Made Clear', 'How to Be an Amazon Affiliate and Earn Money')]
 for n,(prefix,title,category,description,coverprefix) in enumerate(specs):
  src=next(SOURCES.glob(prefix+'*.docx')); d=Document(src)
  slug=re.sub(r'[^a-z0-9]+','-',title.lower().replace('’','')).strip('-')
