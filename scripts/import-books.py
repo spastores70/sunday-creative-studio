@@ -36,7 +36,7 @@ specs=[
 ]
 books=[]
 # These titles were intentionally removed from the public library.
-specs = [spec for spec in specs if spec[2] != 'Insurance' and spec[1] != 'Calculus Made Clear']
+specs = [spec for spec in specs if spec[2] not in ('Insurance', 'Nursing Leadership') and spec[1] != 'Calculus Made Clear']
 for n,(prefix,title,category,description,coverprefix) in enumerate(specs):
  src=next(SOURCES.glob(prefix+'*.docx')); d=Document(src)
  slug=re.sub(r'[^a-z0-9]+','-',title.lower().replace('’','')).strip('-')
